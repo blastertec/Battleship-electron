@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf8">
+		<title>Battleship v. 2.0</title>
+                <style>
+                body {
+                        background-color: black;
+                }
+
+                div#board {
+                        position: relative;
+                        width: 1024px;
+                        height: 863px;
+                        margin: auto;
+                        background: url("board.jpg") no-repeat;
+                }
+                div#messageArea {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        color: rgb(83, 175, 19);
+                        font-size: 2em;
+                }
+                table {
+                        position: absolute; 
+                        left: 173px;
+                        top: 98px;
+                        border-spacing: 0px;
+                }
+                td {
+                        width: 94px;
+                        height: 94px;
+                        cursor: crosshair;
+                }
+                form {
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                        padding: 10px;
+                        background-color: rgb(83, 175, 19);
+                }
+                form input {
+                        background-color: rgb(152, 207, 113); 
+                        border-color: rgb(83, 175, 19);
+                        font-size: 1em;
+                }
+                .hit {
+                        background: url("ship.png") no-repeat center center;
+                }
+                .miss {
+                        background: url("miss.png") no-repeat center center;
+                }
+                </style>
+	</head>
+<body> <!-- 399 chapter ending with keys for exercises -->
+        <div id="board">
+                <div id="messageArea"></div>
+        <table>
+                <tr>
+                        <td id="00" onclick="controller.processClick(this.id)"></td><td id="01" onclick="controller.processClick(this.id)"></td><td id="02" onclick="controller.processClick(this.id)"></td><td id="03" onclick="controller.processClick(this.id)"></td><td id="04" onclick="controller.processClick(this.id)"></td><td id="05" onclick="controller.processClick(this.id)"></td><td id="06" onclick="controller.processClick(this.id)"></td>
+                </tr>
+
+                <tr>
+                        <td id="10" onclick="controller.processClick(this.id)"></td><td id="11" onclick="controller.processClick(this.id)"></td><td id="12" onclick="controller.processClick(this.id)"></td><td id="13" onclick="controller.processClick(this.id)"></td><td id="14" onclick="controller.processClick(this.id)"></td><td id="15" onclick="controller.processClick(this.id)"></td><td id="16" onclick="controller.processClick(this.id)"></td>
+                </tr>
+
+                <tr>
+                        <td id="20" onclick="controller.processClick(this.id)"></td><td id="21" onclick="controller.processClick(this.id)"></td><td id="22" onclick="controller.processClick(this.id)"></td><td id="23" onclick="controller.processClick(this.id)"></td><td id="24" onclick="controller.processClick(this.id)"></td><td id="25" onclick="controller.processClick(this.id)"></td><td id="26" onclick="controller.processClick(this.id)"></td>
+                </tr>
+
+                <tr>
+                        <td id="30" onclick="controller.processClick(this.id)"></td><td id="31" onclick="controller.processClick(this.id)"></td><td id="32" onclick="controller.processClick(this.id)"></td><td id="33" onclick="controller.processClick(this.id)"></td><td id="34" onclick="controller.processClick(this.id)"></td><td id="35" onclick="controller.processClick(this.id)"></td><td id="36" onclick="controller.processClick(this.id)"></td>
+                </tr>
+
+                <tr>
+                        <td id="40" onclick="controller.processClick(this.id)"></td><td id="41" onclick="controller.processClick(this.id)"></td><td id="42" onclick="controller.processClick(this.id)"></td><td id="43" onclick="controller.processClick(this.id)"></td><td id="44" onclick="controller.processClick(this.id)"></td><td id="45" onclick="controller.processClick(this.id)"></td><td id="46" onclick="controller.processClick(this.id)"></td>
+                </tr>
+
+                <tr>
+                        <td id="50" onclick="controller.processClick(this.id)"></td><td id="51" onclick="controller.processClick(this.id)"></td><td id="52" onclick="controller.processClick(this.id)"></td><td id="53" onclick="controller.processClick(this.id)"></td><td id="54" onclick="controller.processClick(this.id)"></td><td id="55" onclick="controller.processClick(this.id)"></td><td id="56" onclick="controller.processClick(this.id)"></td>
+                </tr>
+
+                <tr>
+                        <td id="60" onclick="controller.processClick(this.id)"></td><td id="61" onclick="controller.processClick(this.id)"></td><td id="62" onclick="controller.processClick(this.id)"></td><td id="63" onclick="controller.processClick(this.id)"></td><td id="64" onclick="controller.processClick(this.id)"></td><td id="65" onclick="controller.processClick(this.id)"></td><td id="66" onclick="controller.processClick(this.id)"></td>
+                </tr>
+
+                
+        </table>
+        <form>
+                <input type="text" id="guessInput" placeholder="">
+                <input type="button" id="fireButton" value="Fire!"> &nbsp &nbsp
+                <input type="button" id="restartButton" value="Restart" onClick="window.location.reload();">
+        </form>
+        </div>
+        
+        <script src="bs_script.js"></script>
+</body>
+</html>
